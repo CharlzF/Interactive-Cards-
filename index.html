@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Order Page</title>
+
+  <!-- Font Awesome for icons -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🔔 Top Offer Bar -->
+  <div class="top-offer-bar">
+    🎉 <strong>Special Offer:</strong> Free delivery and cash on delivery – 
+    <strong>Hurry up and order now!</strong>
+  </div>
+
+  <!-- 🧭 Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <i class="fas fa-bars"></i>
+      <div class="store-name-box">STOREROOM</div>
+    </div>
+    <div class="nav-right">
+      <i id="search-btn" class="fas fa-search"></i>
+      <i id="cart-btn" class="fas fa-shopping-cart"></i>
+    </div>
+  </nav>
+
+    <!-- 🔍 Search Box -->
+  <div id="search-box" class="search-box hidden">
+    <input type="text" placeholder="Search products..." />
+  </div>
+
+  <!-- 📋 Side Menu -->
+  <div id="side-menu" class="side-menu hidden">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#orderForm">Order</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- 🛍️ Main Container -->
+  <main class="container">
+
+    <!-- LEFT SIDE: Product Info -->
+    <section class="left-side">
+      <img src="images/image 1.webp" alt="Early Education Device" class="product-img" />
+      <h2 class="product-title">Early Education Device + LCD Writing Tablet ✍️🧠</h2>
+      <p class="price">
+        <span class="new">4500 KSh</span>
+        <span class="old">5300 KSh</span>
+      </p>
+    </section>
+
+    <!-- RIGHT SIDE: Form and Info -->
+    <section class="right-side">
+
+<!-- ✅ Order Form (Now Netlify-Ready) -->
+<div id="orderForm" class="form-box">
+  <h3>Customer Information</h3>
+
+ <form name="order" method="POST" data-netlify="true" action="/thank-you.html" netlify-honeypot="bot-field" class="order-form">
+  <!-- Required for Netlify -->
+  <input type="hidden" name="form-name" value="order" />
+
+  <label for="fname">Full Name</label>
+  <input id="fname" name="fname" type="text" placeholder="fname" required />
+
+  <label for="phone">Phone</label>
+  <input id="phone" name="phone" type="tel" placeholder="Phone" required />
+
+  <label for="altphone">Alt Phone</label>
+  <input id="altphone" name="altphone" type="tel" placeholder="Alt Phone" />
+
+  <label for="county">County</label>
+  <input id="county" name="county" type="text" placeholder="County" required />
+
+  <label for="address">Address</label>
+  <input id="address" name="address" type="text" placeholder="Address" required />
+
+  <!-- Product Dropdown -->
+  <label for="product">Select Product / Price</label>
+  <select id="product" name="product" required>
+    <option value="">-- Choose your product --</option>
+    <option value="BUY ONE - KSh 4,500">BUY ONE - KSh 4,500</option>
+    <option value="BUY TWO - KSh 8,000">BUY TWO - KSh 8,000</option>
+    <option value="BUY THREE - KSh 12,000">BUY THREE - KSh 12,000</option>
+  </select>
+
+  <button type="submit">CLICK HERE TO ORDER</button>
+</form>
+
+
+      <!-- ✅ Cart Summary -->
+      <div id="cartSummary" class="cart-summary">
+        <h4>🛍️ Products in Your Cart</h4>
+        <ul id="cartItemsList"></ul>
+        <p><strong>Total:</strong> <span id="cartTotalAmount">0 KSh</span></p>
+      </div>
+
+        <!-- ✅ Info Sections -->
+      <div class="info-section">
+        <h4>Tired of your child spending too much time on phones or TV 📱?</h4>
+        <h4>Struggling to teach your child reading and writing while they lose focus?</h4>
+        <p>
+          <strong>Now you have the solution:</strong> Talking Flash Cards + LCD Writing Tablet – 
+          designed for Kenyan kids to learn faster, smarter, and with joy.
+        </p>
+        <img src="images/image 2.webp" alt="Child learning" class="info-img" />
+      </div>
+
+      <div class="info-section">
+        <h4>💡 Key Features</h4>
+        <p>✅ 510 Talking Flash Cards - insert the card and the device speaks the word clearly.</p>
+        <p>✅ LCD Writing & Drawing Tablet - kids can practice writing, tracing, and drawing endlessly without wasting paper.</p>
+        <img src="images/image 3.webp" alt="Child playing" class="info-img" />
+      </div>
+
+      <div class="info-section">
+        <p>✅ Multi-sensory learning – see 👀, hear 👂, and write ✍️ at the same time.</p>
+        <p>✅ Screen-free – safe for the eyes, no addiction to phones, only fun learning.</p>
+        <img src="images/image 4.webp" alt="Child playing" class="info-img" />
+      </div>
+
+      <div class="faq-container">
+        <div class="info-section">
+          <h4>🌱 Benefits of the Product</h4>
+
+          <details><summary>Helps kids quickly develop reading and writing skills.</summary></details>
+          <details><summary>Improves memory and focus through visual + audio repetition.</summary></details>
+          <details><summary>Turns learning into play – no more boring lessons.</summary></details>
+          <details><summary>Perfect for home use, preschool, or even extra learning support.</summary></details>
+          <details><summary>Saves money on books, pens, and paper.</summary></details>
+
+          <img src="images/image 5.webp" alt="Child playing" class="info-img" />
+        </div>
+      </div>
+
+      <div class="info-section">
+        <h4>⚖️ With vs Without This Product</h4>
+        <p>🔴 Without it: Your child gets bored, depends on phones, struggles with reading and writing.</p>
+        <p>🟢 With it: Your child learns faster, pronounces correctly, writes confidently, and enjoys learning like a game.</p>
+        <img src="images/image 6.webp" alt="Child learning" class="info-img" />
+      </div>
+
+      <div class="info-section">
+        <h4>🛑 Problems This Product Solves</h4>
+        <details><summary>Kids get bored with traditional teaching methods.</summary></details>
+        <details><summary>Parents struggle to teach correct pronunciation.</summary></details>
+        <details><summary>Over-reliance on smartphones and video games.</summary></details>
+        <details><summary>Wasting money on books and supplies that don’t last.</summary></details>
+        <details><summary>Short attention spans during learning.</summary></details>
+        <img src="images/image 7.webp" alt="Child playing" class="info-img" />
+      </div>
+
+      <div class="info-section">
+        <h4>🔍 Why Our Product Is Better than Others</h4>
+        <p>
+          Unlike other learning toys that only show pictures or play sounds,
+          our Montessori set combines three powerful methods in one device:
+        </p>
+        <details><summary>Talking Flash Cards (audio learning)</summary></details>
+        <details><summary>LCD Writing Tablet (hands-on practice)</summary></details>
+        <details><summary>Visual Word Recognition (flash card images)</summary></details>
+        <details><summary>Most alternatives are either too simple or too distracting (tablet apps full of ads).</summary></details>
+        <details><summary>Our product is screen-free, durable, and designed for real learning results.</summary></details>
+        <img src="images/image 8.webp" alt="Child playing" class="info-img" />
+      </div>
+
+      <div class="info-section">
+        <h4>📖 How to Use</h4>
+        <ul class="how-to-list">
+          <li><span class="icon">▶</span> Insert a flash card into the device</li>
+          <li><span class="icon">▶</span> The device pronounces the word</li>
+          <li><span class="icon">▶</span> Erase the tablet and repeat – use as a fun learning routine!</li>
+        </ul>
+        <img src="images/image 9.webp" alt="Child playing" class="info-img" />
+      </div>
+
+      <div class="info-section">
+        <h4>Your child’s future starts today 🌟</h4>
+        <ul class="how-to-list">
+          <li><span class="icon">▶</span> Don’t waste time on boring or harmful methods…</li>
+          <li><span class="icon">▶</span> Give them a smart, fun, and safe way to learn at home.</li>
+          <li><span class="icon">▶</span> 🎁 Order now – Limited stock in Kenya and selling fast!</li>
+        </ul>
+        <img src="images/image 10.webp" alt="Child playing" class="info-img" />
+      </div>
+
+      <div class="info-section">
+        <h4>Order Now 🛒</h4>
+        <h4>💰 *SATISFACTION GUARANTEED OR YOUR MONEY BACK*</h4>
+        <p>
+          <strong>
+            Any unused product can be returned for free within 30 days from the delivery date.
+            Enjoy fast and free shipping. We guarantee your 100% satisfaction.
+          </strong>
+        </p>
+      </div>
+
+      <div class="info-section">
+        <h4>🚚 *ORDER PROCESS*</h4>
+        <p>
+          <strong>
+            Once the order form is filled out, our customer service team will contact you
+            to confirm your order. After confirmation, your package will be delivered within 24 hours.
+          </strong>
+        </p>
+      </div>
+
+      <div class="container">
+        <h2 class="headline">Free delivery and payment upon receipt.</h2>
+      </div>
+
+      <p class="storename">storecoom1</p>
+      <hr class="divider">
+
+      <!-- ✅ Footer Links -->
+      <div class="links">
+        <div class="link-item">
+          <h4><u>Contact us</u></h4>
+          <div class="underline"></div>
+          <a href="mailto:opulynxs@gmail.com">opulynxs@gmail.com</a>
+          <p>Phone: <a href="tel:+254743 695468">+254 743 695468</a></p>
+        </div>
+
+        <div class="link-item">
+          <h4><u>Terms and Policies</u></h4>
+          <div class="underline"></div>
+          <p>➡️All products are returnable within 30 days if unused.</p>
+          <p>➡️Free delivery and cash on delivery available nationwide.</p>
+        </div>
+
+        <div class="link-item">
+          <h4><u>About the Store</u></h4>
+          <div class="underline"></div>
+          <p>➡️Storecoom1 offers high-quality educational toys that help kids learn smarter and faster through play.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ✅ Fixed bottom “Order Now” button -->
+  <button id="orderNow" class="fixed-order-btn">
+    🛍️ Click Here To Order Now 🛍️
+  </button>
+
+  <!-- ✅ Scripts -->
+  <link rel="stylesheet" href="popup.css" />
+  <script src="script.js"></script>
+
+  <script>
+    // 🛒 Load cart data from localStorage
+    const cartData = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartList = document.getElementById("cartItemsList");
+    const totalAmount = document.getElementById("cartTotalAmount");
+
+    if (cartData.length > 0) {
+      let total = 0;
+      cartData.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.name} - ${item.newPrice} KSh`;
+        cartList.appendChild(li);
+        total += item.newPrice;
+      });
+      totalAmount.textContent = total + " KSh";
+    } else {
+      document.getElementById("cartSummary").innerHTML = "<p>Your cart is empty.</p>";
+    }
+
+    // Clear cart after order submission
+    const orderForm = document.querySelector(".order-form");
+    orderForm.addEventListener("submit", () => {
+      localStorage.removeItem("cart");
+    });
+
+    // 🛍️ Scroll to form when clicking Order button
+    const orderNow = document.getElementById("orderNow");
+    orderNow.addEventListener("click", (e) => {
+      e.preventDefault();
+      const form = document.getElementById("orderForm");
+      if (form) {
+        form.scrollIntoView({ behavior: "smooth", block: "center" });
+        const fname = document.getElementById("fname");
+        if (fname) fname.focus();
+      }
+    });
+
+    // 🏬 Scroll to form when clicking store name
+    const storeNameBox = document.querySelector(".store-name-box");
+    storeNameBox.addEventListener("click", (e) => {
+      e.preventDefault();
+      const form = document.getElementById("orderForm");
+      if (form) {
+        form.scrollIntoView({ behavior: "smooth", block: "center" });
+        const fname = document.getElementById("fname");
+        if (fname) fname.focus();
+      }
+    });
+  </script>
+</body>
+</html>
