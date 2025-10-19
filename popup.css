@@ -1,0 +1,201 @@
+/* === Dropdown Menu === */
+.dropdown-menu {
+  position: fixed;
+  top: 80px;
+  left: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px;
+}
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dropdown-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.dropdown-menu li:hover {
+  background: #f4f4f4;
+}
+
+/* === Search Bar === */
+.search-bar {
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  gap: 8px;
+}
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.search-bar button {
+  background: #00cc66;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.search-bar button:hover {
+  background: #00aa55;
+}
+
+/* === Cart Popup === */
+.cart-popup {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 250px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+.cart-header {
+  background: #a8ff00;
+  padding: 10px;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-body {
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.close-cart {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* === Storecoom1 Tabs (Top & Bottom) === */
+.store-tab {
+  display: inline-block;
+  background: linear-gradient(135deg, #00cc66, #a8ff00);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin: 5px 0;
+  border: 2px solid transparent;
+}
+
+.store-tab:hover {
+  background: linear-gradient(135deg, #00b359, #8fff00);
+  transform: translateY(-2px);
+  border: 2px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* === Bottom Storecoom Box === */
+.bottom-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  margin-top: 20px;
+  border-top: 2px solid #eee;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  .store-tab {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+  .bottom-tab {
+    margin-top: 15px;
+    padding: 10px 0;
+  }
+}
+/* === Storecoom1 Tabs (Top & Bottom) with Neon Glow === */
+.store-tab {
+  display: inline-block;
+  background: linear-gradient(135deg, #00cc66, #a8ff00);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  margin: 5px 0;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+/* Hover Glow Effect */
+.store-tab:hover {
+  background: linear-gradient(135deg, #00e676, #baff00);
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px #00ff88, 0 0 20px #a8ff00, 0 0 30px #00ff88;
+  border: 2px solid #fff;
+  animation: glowPulse 1.5s infinite alternate;
+}
+
+/* Neon Pulse Animation */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 8px #00ff88, 0 0 15px #a8ff00, 0 0 25px #00ff88;
+  }
+  100% {
+    box-shadow: 0 0 20px #00ff88, 0 0 35px #a8ff00, 0 0 45px #00ff88;
+  }
+}
+
+/* Bottom Storecoom1 Tab Section */
+.bottom-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  margin-top: 25px;
+  border-top: 2px solid #eee;
+}
+
+/* Mobile Friendly Adjustments */
+@media (max-width: 768px) {
+  .store-tab {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  .bottom-tab {
+    padding: 10px 0;
+    margin-top: 15px;
+  }
+}
